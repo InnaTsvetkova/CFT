@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/firstLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="228dp"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/firstLine"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/scheme"/>
+
+    <TextView
+        android:id="@+id/schemeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/scheme"
+        app:layout_constraintTop_toBottomOf="@id/scheme"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brand"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/firstLine"
+        app:layout_constraintTop_toBottomOf="@id/schemeValue"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/brandValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/brand"
+        app:layout_constraintTop_toBottomOf="@id/brand"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/cardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cardNumber"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/firstLine"
+        app:layout_constraintTop_toBottomOf="@id/brandValue"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/length"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/cardNumber"
+        app:layout_constraintTop_toBottomOf="@id/cardNumber"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/luhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/luhn"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toEndOf="@id/cardNumber"
+        app:layout_constraintTop_toTopOf="@id/length"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="2dp"/>
+
+    <TextView
+        android:id="@+id/lengthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/length"
+        app:layout_constraintTop_toBottomOf="@id/length"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/luhnValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/luhn"
+        app:layout_constraintTop_toBottomOf="@id/luhn"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/firstLine"
+        app:layout_constraintTop_toBottomOf="@id/lengthValue"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/typeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/type"
+        app:layout_constraintTop_toBottomOf="@id/type"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/prepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prepaid"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/secondLine"
+        app:layout_constraintTop_toTopOf="@id/scheme"/>
+
+
+    <TextView
+        android:id="@+id/prepaidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/prepaid"
+        app:layout_constraintTop_toBottomOf="@id/prepaid"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/secondLine"
+        app:layout_constraintTop_toBottomOf="@id/prepaidValue"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/countryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/country"
+        app:layout_constraintTop_toBottomOf="@id/country"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitude"
+        android:textSize="14sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/country"
+        app:layout_constraintTop_toBottomOf="@id/countryValue"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/latitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/latitude"
+        app:layout_constraintTop_toTopOf="@id/latitude"
+        android:layout_marginStart="4dp"/>
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        android:textSize="14sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/latitudeValue"
+        app:layout_constraintTop_toTopOf="@id/latitude"
+        android:layout_marginStart="4dp"/>
+
+
+    <TextView
+        android:id="@+id/longitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/latitude"
+        app:layout_constraintStart_toEndOf="@id/longitude"
+        android:layout_marginStart="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end"
+        android:textSize="14sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@id/longitudeValue"
+        app:layout_constraintTop_toTopOf="@id/latitude"/>
+
+
+    <TextView
+        android:id="@+id/bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bank"
+        style="@style/TextViewPrimary"
+        app:layout_constraintStart_toStartOf="@id/secondLine"
+        app:layout_constraintTop_toBottomOf="@id/latitude"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/bankValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSecondary"
+        app:layout_constraintStart_toStartOf="@id/bank"
+        app:layout_constraintTop_toBottomOf="@id/bank"
+        android:layout_marginTop="2dp"/>
+
+
+    <TextView
+        android:id="@+id/syte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/bank"
+        app:layout_constraintTop_toBottomOf="@id/bankValue"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/bank"
+        app:layout_constraintTop_toBottomOf="@id/syte"
+        android:layout_marginTop="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
